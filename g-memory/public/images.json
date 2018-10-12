@@ -1,0 +1,38 @@
+{
+    "images": [{
+            "id": 1,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders2-1-1024x359.jpg"
+        },
+        {
+            "id": 2,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders3-2-1024x359.jpg"
+        },
+        {
+            "id": 3,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders5-1-1024x359.jpg"
+        },
+        {
+            "id": 4,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders2-1-1024x359.jpg"
+        },
+        {
+            "id": 5,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders7-1-1024x359.jpg"
+        },
+        {
+            "id": 6,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders8-1-1024x359.jpg"
+        },
+        {
+            "id": 7,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders9-1-1024x359.jpg"
+        },
+        {
+            "id": 8,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders10-1-1024x359.jpg"
+        },
+        {
+            "id": 9,
+            "imageURL": "src/assets/Wickney-Kids-Show-Sliders11-1-1024x359.jpg"
+        }]
+    }

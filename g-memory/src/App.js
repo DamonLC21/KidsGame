@@ -1,14 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Card from "./components/Card.js"
 import './App.css';
 import Main from './Components/Main.js';
 
 class App extends Component {
+
+constructor(props){
+  super(props)
+  this.state = {
+    data: []
+  }
+}
+
+componentDidMount() {
+  this.getImages();
+
+}
+
+getImages(){
+  fetch("images.json")
+  .then(result => result.json())
+  .then(console.log)
+      .then(result =>
+        this.setState({
+          data: result
+        })
+      );
+}
+
   render() {
     return (
       <div className="App">
         
-      <Main />
+      <Main data={this.state.data}/>
 
       </div>
     );
