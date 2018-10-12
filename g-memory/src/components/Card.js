@@ -12,8 +12,8 @@ class Cards extends Component {
         this.setState({hideSkill: !this.state.hideSkill})
     }
 
-    onClick =() =>{
-        let card = document.querySelector('.card')
+    onClick =(e) =>{
+        const card = e.target
         card.classList.toggle("is-flipped")
     }
 
@@ -21,8 +21,8 @@ class Cards extends Component {
         console.log(this.props.data.imageURL)
         return (
             <div className="col-md-4">
-                    <div className="scene scene--card" onClick={this.onClick}>
-                     <div className="card">
+                    <div className="scene scene--card">
+                     <div className="card" onClick={this.onClick}>
                         <div className="card__face card__face--front">
                         <img src={this.props.data.imageURL} alt="Card_image" />
                         </div>
