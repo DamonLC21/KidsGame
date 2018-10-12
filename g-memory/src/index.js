@@ -15,11 +15,10 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // });
 
 // onClick=(e) => {
-//   classList.toggle
+//   if classList.toggle
 // }
-
-
-
 // if= match => display:none for disapearing card
 
 // if its not a match flip it back to original class
+
+serviceWorker.unregister();

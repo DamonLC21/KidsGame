@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+
+class Cards extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            hideSkill: false
+        }
+    }
+
+    handleChange = (event) => {
+        this.setState({hideSkill: !this.state.hideSkill})
+    }
+
+    onClick =() =>{
+        let card = document.querySelector('.card')
+        card.classList.toggle("is-flipped")
+    }
+
+    render() {
+        console.log(this.props.data.imageURL)
+        return (
+            <div className="col-md-4">
+                    <div className="scene scene--card" onClick={this.onClick}>
+                     <div className="card">
+                        <div className="card__face card__face--front">
+                        <img src={this.props.data.imageURL} alt="Card_image" />
+                        </div>
+                        <div className="card__face card__face--back">back</div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+
+export default Cards

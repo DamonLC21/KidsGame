@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Main from './Components/Main.js';
 
 class App extends Component {
+
+constructor(props){
+  super(props)
+  this.state = {
+    data: []
+  }
+}
+
+componentDidMount() {
+  this.getImages();
+
+}
+
+getImages(){
+  fetch("images.json")
+  .then(result => result.json())
+  .then(result =>
+    this.setState({
+      data: result.images
+    })
+  );
+}
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <div class = "card"></div>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        
+      <Main data={this.state.data}/>
+
       </div>
     );
   }
