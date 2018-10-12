@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Card from "./components/Card.js"
 import './App.css';
-import Main from './Components/Main.js';
+import Main from './components/Main.js';
 
 class App extends Component {
 
@@ -20,12 +19,11 @@ componentDidMount() {
 getImages(){
   fetch("images.json")
   .then(result => result.json())
-  .then(console.log)
-      .then(result =>
-        this.setState({
-          data: result
-        })
-      );
+  .then(result =>
+    this.setState({
+      data: result.images
+    })
+  );
 }
 
   render() {

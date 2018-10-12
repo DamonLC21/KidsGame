@@ -1,16 +1,21 @@
 import React from 'react';
 import Card from './Card.js';
 
-class Main extends React.Component{
+const Main = (props) => {
     
-    render (){
+    const createCard = props.data.map((list, i) => {
+        console.log("hello")
+            return (
+              <Card data={list} key={i}/>
+            )
+    })
+    
         return(
             <div className="body container">
-                <Card data={this.props.data}/>
-
+                {createCard}
             </div>
         )
-    }
+    
 }
 
 
